@@ -1,3 +1,5 @@
+package have;
+
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,13 +35,21 @@ public class Transaction {
 
     public class Output {
         /** value in bitcoins of the output */
-        public double value;
+        private double value;
         /** the address or public key of the recipient */
-        public PublicKey address;
+        private PublicKey address;
 
         public Output(double v, PublicKey addr) {
             value = v;
             address = addr;
+        }
+
+        public double getValue() {
+            return value;
+        }
+
+        public PublicKey getAddress() {
+            return address;
         }
     }
 
